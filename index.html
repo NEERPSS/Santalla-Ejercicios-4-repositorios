@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Problemas del Calculista</title>
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+  <header>
+    <h1>Problemas del Calculista</h1>
+    <p>Algoritmos interactivos con formularios, DOM y JavaScript</p>
+  </header>
+
+  <main>
+    <!-- Problema 1: Panes -->
+    <section class="tarjeta panes" aria-labelledby="t1">
+      <h2 id="t1">1. El reparto de los panes</h2>
+      <p><strong>Descripción:</strong> Dos viajeros aportan panes para comer por igual con un forastero, que paga 8 monedas de plata por su parte. Se reparten las monedas en proporción justa.</p>
+      <p><strong>Algoritmo:</strong></p>
+      <ol>
+        <li>Cortar cada pan en 3 porciones y sumar los panes de ambos.</li>
+        <li>Calcular cuánto come cada persona y cuánto le aporta cada viajero al forastero.</li>
+        <li>Repartir las 8 monedas según ese aporte.</li>
+      </ol>
+      <p><strong>Entrada:</strong> panes de cada viajero. <strong>Salida:</strong> monedas justas para cada uno.</p>
+      <form id="form-panes" novalidate>
+        <label for="panes1">Panes del viajero 1</label>
+        <input type="number" id="panes1" placeholder="Ej: 5">
+        <label for="panes2">Panes del viajero 2</label>
+        <input type="number" id="panes2" placeholder="Ej: 3">
+        <button type="submit">Calcular monedas</button>
+      </form>
+      <p id="resultado-panes" class="resultado" aria-live="polite"></p>
+    </section>
+
+    <!-- Problema 2: Camellos -->
+    <section class="tarjeta camellos" aria-labelledby="t2">
+      <h2 id="t2">2. El reparto de los camellos</h2>
+      <p><strong>Descripción:</strong> Una herencia de camellos debe repartirse en partes de 1/2, 1/3 y 1/9. Se buscan camellos auxiliares hasta llegar a un múltiplo de 18 para que las fracciones salgan exactas.</p>
+      <p><strong>Algoritmo:</strong></p>
+      <ol>
+        <li>Leer la cantidad de camellos.</li>
+        <li>Sumar camellos auxiliares hasta el siguiente múltiplo de 18.</li>
+        <li>Calcular las tres partes y el sobrante.</li>
+      </ol>
+      <p><strong>Entrada:</strong> camellos iniciales (entero). <strong>Salida:</strong> total ajustado, partes de los hermanos y ganancia del calculista.</p>
+      <form id="form-camellos" novalidate>
+        <label for="camellos">Camellos iniciales</label>
+        <input type="number" id="camellos" placeholder="Ej: 35">
+        <button type="submit">Calcular reparto</button>
+      </form>
+      <p id="resultado-camellos" class="resultado" aria-live="polite"></p>
+    </section>
+
+    <!-- Problema 3: Pi -->
+    <section class="tarjeta pi" aria-labelledby="t3">
+      <h2 id="t3">3. Estimación del valor de Pi</h2>
+      <p><strong>Descripción:</strong> Se estima π con la fórmula π ≈ √(6 · Σ 1/n²), sumando los inversos de los cuadrados con un bucle.</p>
+      <p><strong>Algoritmo:</strong></p>
+      <ol>
+        <li>Leer el límite n.</li>
+        <li>Con un bucle, acumular la suma de 1/k² para k de 1 a n.</li>
+        <li>Multiplicar por 6 y sacar la raíz cuadrada.</li>
+      </ol>
+      <p><strong>Entrada:</strong> entero n (por ejemplo 100, 10000 o 1000000). <strong>Salida:</strong> valor estimado, valor real y diferencia.</p>
+      <form id="form-pi" novalidate>
+        <label for="limite">Valor de n</label>
+        <input type="number" id="limite" placeholder="Ej: 10000">
+        <button type="submit">Estimar Pi</button>
+      </form>
+      <p id="resultado-pi" class="resultado" aria-live="polite"></p>
+    </section>
+
+    <!-- Problema 4: Ecuación cuadrática -->
+    <section class="tarjeta cuadratica" aria-labelledby="t4">
+      <h2 id="t4">4. Raíces de una ecuación cuadrática</h2>
+      <p><strong>Descripción:</strong> Se hallan las raíces reales de ax² + bx + c = 0 con el discriminante D = b² − 4ac.</p>
+      <p><strong>Algoritmo:</strong></p>
+      <ol>
+        <li>Leer a, b y c.</li>
+        <li>Calcular D.</li>
+        <li>Si D &gt; 0 hay dos raíces; si D = 0 hay una; si D &lt; 0 no hay raíces reales.</li>
+      </ol>
+      <p><strong>Entrada:</strong> números a, b y c (a distinto de 0). <strong>Salida:</strong> mensaje y raíces calculadas.</p>
+      <form id="form-cuadratica" novalidate>
+        <label for="coef-a">Valor de a</label>
+        <input type="number" id="coef-a" step="any" placeholder="Ej: 1">
+        <label for="coef-b">Valor de b</label>
+        <input type="number" id="coef-b" step="any" placeholder="Ej: -3">
+        <label for="coef-c">Valor de c</label>
+        <input type="number" id="coef-c" step="any" placeholder="Ej: 2">
+        <button type="submit">Calcular raíces</button>
+      </form>
+      <p id="resultado-cuadratica" class="resultado" aria-live="polite"></p>
+    </section>
+  </main>
+
+  <footer><p>Programación Web I · Problemas inspirados en «El hombre que calculaba»</p></footer>
+
+  <script src="js/comun.js"></script>
+  <script src="js/panes.js"></script>
+  <script src="js/camellos.js"></script>
+  <script src="js/pi.js"></script>
+  <script src="js/cuadratica.js"></script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+/* Paleta: noche índigo, terracota, verde azulado y ciruela */
+body {
+  margin: 0;
+  background: #EEF0F7;
+  color: #1E2347;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.5;
+}
+header, footer { background: #232B55; color: #F2F4FB; text-align: center; padding: 24px 16px; }
+footer { font-size: 14px; }
+h1, h2 { font-family: Georgia, "Times New Roman", serif; }
+h1 { margin: 0 0 8px; font-size: 32px; }
+header p, footer p { margin: 0; }
+main { max-width: 680px; margin: 0 auto; padding: 16px; }
+
+.tarjeta { background: #FFFFFF; border: 3px solid #3B4A9A; border-radius: 12px; padding: 20px; margin: 20px 0; }
+.tarjeta h2 { margin-top: 0; font-size: 24px; }
+.camellos { border-color: #A4452C; }
+.pi { border-color: #1F6F6B; }
+.cuadratica { border-color: #6B3A7A; }
+
+label { display: block; margin-top: 12px; font-weight: bold; }
+input {
+  display: block; width: 100%; box-sizing: border-box; margin-top: 4px; padding: 10px;
+  font-size: 16px; border: 2px solid #5B6280; border-radius: 6px; background: #FFFFFF; color: #1E2347;
+}
+button {
+  margin-top: 16px; padding: 12px 20px; font-size: 16px; font-weight: bold;
+  color: #FFFFFF; background: #3B4A9A; border: 0; border-radius: 6px; cursor: pointer;
+}
+.camellos button { background: #A4452C; }
+.pi button { background: #1F6F6B; }
+.cuadratica button { background: #6B3A7A; }
+input:focus, button:focus { outline: 3px solid #E0A526; outline-offset: 2px; }
+
+.resultado { margin: 16px 0 0; white-space: pre-line; border-radius: 6px; }
+.resultado.ok, .resultado.error { padding: 12px; }
+.resultado.ok { background: #E3F3E6; color: #14502A; }
+.resultado.error { background: #FBE4E7; color: #7A1020; }
